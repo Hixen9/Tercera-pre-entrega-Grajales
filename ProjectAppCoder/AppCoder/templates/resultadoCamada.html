@@ -1,0 +1,21 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1 style= "color: blue;">Curso Encontrado!</h1>
+    
+{% if  cursos %}
+    <ul>
+        {% for curso in cursos %}
+            <li>
+                {{curso.nombre}} - {{curso.camada}}
+            </li>
+        {% endfor %}
+    </ul>
+     
+{% endif %}
+
+
+ 
+{% endblock contenidoQueCambia %}

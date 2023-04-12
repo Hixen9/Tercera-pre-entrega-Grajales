@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1 style= "color: blue;">Buscando Camadas</h1>
+<form action="{% url 'Buscar' %}" method="GET">{% csrf_token %}
+    <p>Camada: <input type = "number" name="camada" id="camada"></p>
+
+    <button type="submit"> Buscar </button>
+
+</form>
+ 
+{% endblock contenidoQueCambia %}
+    
